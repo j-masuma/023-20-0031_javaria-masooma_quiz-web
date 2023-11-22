@@ -13,7 +13,12 @@ function Header() {
         </div>
         <div>
           <Nav className="me-auto">
-            <Nav.Link style={{ color: "black" }} as={Link} to="/" href="#about">
+            <Nav.Link
+              style={{ color: "black" }}
+              as={Link}
+              to="/about"
+              href="#about"
+            >
               About
             </Nav.Link>
             <Nav.Link style={{ color: "black" }} as={Link} to="/contact">

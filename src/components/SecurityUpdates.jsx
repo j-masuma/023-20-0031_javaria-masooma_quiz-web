@@ -13,7 +13,7 @@ export const SecurityUpdates = () => {
               padding: "20px",
             }}
           >
-            Pinpoint Security,
+            Our Pinpoint Security,
             <h1
               style={{
                 fontSize: "2.5rem",
