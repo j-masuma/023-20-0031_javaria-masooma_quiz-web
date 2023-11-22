@@ -48,9 +48,11 @@ function Contact() {
             placeholder="Enter Feedback"
           />
         </Form.Group>
-        <Button onClick={submitInfo} variant="secondary">
-          Submit
-        </Button>
+        <div className="d-flex justify-content-center align-items-center mb-4">
+          <Button onClick={submitInfo} variant="secondary">
+            Submit
+          </Button>
+        </div>
       </div>
     </div>
   );

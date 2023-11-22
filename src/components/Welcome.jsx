@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import bus from "../assets/images/bus-img.png";
 import sukkur from "../assets/images/sukkur-img.png";
@@ -7,7 +7,13 @@ import Button from "react-bootstrap/Button";
 import leftIcon from "../assets/images/teenyicons_left-solid.png";
 import rightIcon from "../assets/images/teenyicons_right-solid.png";
 import Statistics from "./Statistics";
+import Contact from "./Contact";
 function Welcome() {
+  const [showContactForm, setShowContactForm] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowContactForm(true);
+  };
   return (
     <div className="container p-t-0">
       <div className="row">
@@ -77,10 +83,19 @@ function Welcome() {
         </p>
       </div>
       <div className="row">
-        <div className="d-flex justify-contet-center align-items-center mb-4">
-          <Button variant="secondary">Get Started</Button>
-        </div>
+        {showContactForm ? (
+          <div>
+            <Contact />
+          </div>
+        ) : (
+          <div className="d-flex justify-content-center align-items-center mb-4">
+            <Button onClick={handleButtonClick} variant="secondary">
+              Get Started
+            </Button>
+          </div>
+        )}
       </div>
+      );
     </div>
   );
 }
