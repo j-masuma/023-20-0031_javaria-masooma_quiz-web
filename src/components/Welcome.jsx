@@ -8,6 +8,7 @@ import leftIcon from "../assets/images/teenyicons_left-solid.png";
 import rightIcon from "../assets/images/teenyicons_right-solid.png";
 import Statistics from "./Statistics";
 import Contact from "./Contact";
+import { SecurityUpdates } from "./SecurityUpdates";
 function Welcome() {
   const [showContactForm, setShowContactForm] = useState(false);
 
@@ -40,48 +41,44 @@ function Welcome() {
       </div>
       <div className="row">
         <div className="col col-sm-6 col-md-9 col-lg-9">
-          <h1>The Fast Pinpoint</h1>
-          <h1> Get Started `{"->"}` </h1>
-          <h1>Tracking & Reservation.</h1>
+          <h1
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "bold",
+              padding: "20px",
+            }}
+          >
+            The Fast Pinpoint
+            <h1
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                padding: "20px",
+                color: "red",
+              }}
+            >
+              {" "}
+              Get Started `{"->"}`{" "}
+            </h1>
+            Tracking & Reservation.
+          </h1>
         </div>
         <div className="col col-sm-6 col-md-3 col-lg-3 p-4">
           <img src={getstart} alt="Get Started" />
         </div>
       </div>
       <div className="row">
-        <p className="p-4">
+        <p className="d-flex justify-content-center align-items-center m-4">
           Pinpoint is the fastest tracking and reservation software solution for
           personal and enterprise vehicles for institutes, offices and companies
           with live tracking, history recording, estimated arrival time and
           usage report generation and much more features
         </p>
       </div>
-      {/* <div className="row mb-4">
-        <div className="col col-lg-4 col-md-4 col-sm-4">
-          <Button variant="secondary">Secondary</Button>
-        </div>
-        <div className="col col-lg-4 col-md-4 col-sm-4">
-          <Button variant="secondary">Secondary</Button>
-        </div>
-        <div className="col col-lg-4 col-md-4 col-sm-4">
-          <Button variant="secondary">Secondary</Button>
-        </div>
-      </div> */}
+
       {<Statistics />}
-      <div className="row">
-        <h1>
-          Pinpoint Security,
-          <h1> ensure the best usage </h1>for the institutes
-        </h1>
-      </div>
-      <div className="row">
-        <p>
-          We ensure the best usage for vehicles tracking and reservation system
-          security with advance encryption standards and capability of keeping
-          your assets like car, points much more secure with the live tracking
-          system.
-        </p>
-      </div>
+
+      <SecurityUpdates />
       <div className="row">
         {showContactForm ? (
           <div>
@@ -89,13 +86,16 @@ function Welcome() {
           </div>
         ) : (
           <div className="d-flex justify-content-center align-items-center mb-4">
-            <Button onClick={handleButtonClick} variant="secondary">
+            <Button
+              className="p-4"
+              onClick={handleButtonClick}
+              variant="secondary"
+            >
               Get Started
             </Button>
           </div>
         )}
       </div>
-      );
     </div>
   );
 }

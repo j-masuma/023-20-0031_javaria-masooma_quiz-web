@@ -8,10 +8,10 @@ const Statistics = () => {
   const [downloads, setDownloads] = useState(10);
   return (
     <Container>
-      <h2>Feedback</h2>
       <div className="row p-4">
-        <div className="col col-lg-4 col-md-4 col-sm-4">
+        <div className="col col-lg-4 col-md-4 col-sm-4 d-flex justify-content-around align-items-center mb-4 ">
           <Button
+            className="m-3 p-3"
             onClick={() => setUsersCount(usersCount + 1)}
             variant="secondary"
           >
@@ -20,6 +20,7 @@ const Statistics = () => {
         </div>
         <div className="col col-lg-4 col-md-4 col-sm-4">
           <Button
+            className="m-3 p-3"
             onClick={() => setTrustedClientsCount(trustedClientsCount + 1)}
             variant="secondary"
           >
@@ -28,6 +29,7 @@ const Statistics = () => {
         </div>
         <div className="col col-lg-4 col-md-4 col-sm-4">
           <Button
+            className="m-3 p-3"
             onClick={() => setDownloads(downloads + 1)}
             variant="secondary"
           >
